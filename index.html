@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Frame 3D Scene</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+
+    <a-scene background="color: #ECECEC">
+        
+        <a-assets>
+            <a-asset-item id="model-left" src="cinnamoroll.glb"></a-asset-item>
+            <a-asset-item id="model-right" src="sunna_zzz.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+        <a-entity 
+            gltf-model="#model-left" 
+            position="-3 0 -4" 
+            scale="1 1 1"
+            rotation="0 45 0">
+        </a-entity>
+
+        <a-entity 
+            gltf-model="#model-right" 
+            position="3 0 -4" 
+            scale="1 1 1"
+            rotation="0 -45 0">
+        </a-entity>
+
+        <a-entity type="ambient" color="#FFF"></a-entity>
+        <a-entity type="directional" color="#FFF" intensity="0.5" position="-1 1 2"></a-entity>
+
+    </a-scene>
+
+</body>
+</html>
